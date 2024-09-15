@@ -1,20 +1,12 @@
+import Hamburger from "./Hamburger";
 import style from "./Header.module.css";
 
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { AppStorageContext } from "./Storage/AppStorage";
 
-function Header({ handleOverlay }) {
-  const [isHamClicked, setHamClick] = useState(false);
-
-  function handleHamMenu() {
-    if (isHamClicked) {
-      setHamClick(false);
-      handleOverlay(false);
-    } else {
-      setHamClick(true);
-      handleOverlay(true);
-    }
-  }
-
+function Header() {
+  const { whichCardClicked } = useContext(AppStorageContext);
+  console.log(whichCardClicked);
   return (
     <header className="container">
       <div className={style.header_inner}>
@@ -61,16 +53,11 @@ function Header({ handleOverlay }) {
           </svg>
         </div>
         <div className={style.app_name}>CGPA Calculator</div>
-        <div
-          onClick={handleHamMenu}
-          className={`${style.hamburger_menu} ${
-            isHamClicked ? style.active : ""
-          }`}
-        >
-          <div className={`${style.hamburger} ${style.hamburger_1}`}></div>
-          <div className={`${style.hamburger} ${style.hamburger_2}`}></div>{" "}
-          <div className={`${style.hamburger} ${style.hamburger_3}`}></div>
-        </div>
+        {whichCardClicked === "" ? (
+          <div className={style.placeHolder}></div>
+        ) : (
+          <Hamburger />
+        )}
       </div>
     </header>
   );

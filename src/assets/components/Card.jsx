@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import style from "./Card.module.css";
+import { AppStorageContext } from "./Storage/AppStorage";
 
 function Card({ img, text }) {
+  const { handleCardClick } = useContext(AppStorageContext);
+
   return (
-    <div className={style.card_container}>
+    <div onClick={() => handleCardClick(text)} className={style.card_container}>
       <div className={style.card_img}>
         <img
           className={style.logo_img}

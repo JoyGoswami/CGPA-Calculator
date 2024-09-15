@@ -1,23 +1,22 @@
-import { Fragment, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 
 import "./App.css";
 import Header from "./assets/components/Header";
 import Main from "./assets/components/Main";
 import Footer from "./assets/components/Footer";
 
-function App() {
-  const [isOverlayOn, setOverlay] = useState(false);
+import AppStorageContextProvider from "./assets/components/Storage/AppStorage";
 
-  function handleOverlay(overlay) {
-    setOverlay(overlay);
-  }
+function App() {
   return (
     <>
-      <div className="section">
-        <Header handleOverlay={handleOverlay} />
-        <Main overlay={isOverlayOn} />
-        <Footer />
-      </div>
+      <AppStorageContextProvider>
+        <div className="section">
+          <Header />
+          <Main />
+          <Footer />
+        </div>
+      </AppStorageContextProvider>
     </>
   );
 }

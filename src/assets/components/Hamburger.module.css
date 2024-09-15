@@ -1,11 +1,7 @@
-header {
-  /* height: 64px; */
-  background-color: var(--primary-color);
-}
 /*                 */
 /* hamburger Menu  */
 /*                 */
-/* .hamburger_menu {
+.hamburger_menu {
   height: 24px;
   width: 40px;
   position: relative;
@@ -32,51 +28,16 @@ header {
 .hamburger_menu.active .hamburger_1 {
   transform: translate(0%, -50%) rotate(45deg);
   top: 50%;
-  
+  /* transform: translate(0%, 100%) rotateZ(24deg); */
 }
 .hamburger_menu.active .hamburger_2 {
   display: none;
 }
 .hamburger_menu.active .hamburger_3 {
- 
+  /* transform: translate(0%, 100%) rotateZ(24deg); */
   top: 50%;
   transform: translate(0%, -50%) rotate(-45deg);
-} */
+}
 /*                 */
 /* hamburger Menu  */
 /*                 */
-
-/*                 */
-/* header inner    */
-/*                 */
-
-.header_inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  height: 100%;
-}
-.logo {
-  cursor: pointer;
-}
-.app_name {
-  font-weight: 800;
-  color: white;
-}
-
-/*                 */
-/* header inner    */
-/*                 */
-
-/* hamburger menu  */
-/* click to overlay*/
-/*  functionality  */
-
-/* hamburger menu  */
-/* click to overlay*/
-/*  functionality  */
-.placeHolder {
-  width: 40px;
-  height: 24px;
-}
