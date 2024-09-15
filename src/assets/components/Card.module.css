@@ -1,0 +1,26 @@
+.card_container {
+  width: 150px;
+  height: 144px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.card_img {
+  width: 68px;
+  height: 96px;
+  /* background-image: url("../icons/nu_logo.png");
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-size: cover; */
+}
+.logo_img {
+  width: 100%;
+}
+.card_name {
+  color: white;
+}

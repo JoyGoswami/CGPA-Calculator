@@ -6,11 +6,16 @@ import Main from "./assets/components/Main";
 import Footer from "./assets/components/Footer";
 
 function App() {
+  const [isOverlayOn, setOverlay] = useState(false);
+
+  function handleOverlay(overlay) {
+    setOverlay(overlay);
+  }
   return (
     <>
       <div className="section">
-        <Header />
-        <Main />
+        <Header handleOverlay={handleOverlay} />
+        <Main overlay={isOverlayOn} />
         <Footer />
       </div>
     </>

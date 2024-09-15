@@ -2,14 +2,16 @@ import style from "./Header.module.css";
 
 import React, { useState } from "react";
 
-function Header() {
+function Header({ handleOverlay }) {
   const [isHamClicked, setHamClick] = useState(false);
 
   function handleHamMenu() {
     if (isHamClicked) {
       setHamClick(false);
+      handleOverlay(false);
     } else {
       setHamClick(true);
+      handleOverlay(true);
     }
   }
 
