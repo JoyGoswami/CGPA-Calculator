@@ -1,0 +1,13 @@
+footer {
+  /* height: 64px; */
+  background-color: var(--primary-color);
+}
+.footer_inner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_content {
+  color: white;
+}
