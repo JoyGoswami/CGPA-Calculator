@@ -1,0 +1,45 @@
+/* .add_btn {
+  background-color: none;
+  border: none;
+  outline: none;
+  height: 54px;
+  width: 54px;
+
+  border-radius: 50%;
+  cursor: pointer;
+} */
+.add_btn_contaier {
+  width: 100%;
+  border: 1px solid red;
+  text-align: center;
+  padding: 8px 0;
+  position: relative;
+}
+/* .btn_icon {
+  border-radius: 50%;
+}
+.add_btn_year_container {
+  position: absolute;
+  top: -100%;
+  background-color: red;
+} */
+.add_btn {
+  height: 35px;
+  width: 100px;
+  position: relative;
+}
+.dash {
+  position: absolute;
+  top: 50%;
+  height: 15px;
+  width: 10px;
+  transform: translate(0%, -50%);
+}
+.left_dash {
+  border-right: 1px solid black;
+  left: 0;
+}
+.right_dash {
+  right: 0;
+  border-left: 1px solid black;
+}

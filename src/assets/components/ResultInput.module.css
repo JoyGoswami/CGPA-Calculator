@@ -1,0 +1,49 @@
+.result_input {
+  background-color: #ffe1ab;
+  border-bottom: 1px solid var(--primary-color);
+}
+.course_name_container {
+  display: grid;
+  gap: 4px 0;
+  padding-top: 4px;
+  /* justify-content: space-between; */
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.course_number {
+  justify-self: center;
+}
+.course_name {
+  justify-self: start;
+}
+.course_code {
+  grid-area: 2/1/-1/3;
+  justify-self: left;
+  margin-left: 20px;
+}
+.input_field_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+.input_field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 8px;
+  width: 150px;
+  height: 24px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+}
+.credit {
+  width: 50%;
+  max-width: 50%;
+}
+.grade_select {
+  background-color: #ffe1ab;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding-inline: 8px;
+  outline: none;
+}

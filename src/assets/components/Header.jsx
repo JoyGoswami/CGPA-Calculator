@@ -6,10 +6,10 @@ import { AppStorageContext } from "./Storage/AppStorage";
 
 function Header() {
   const { whichCardClicked } = useContext(AppStorageContext);
-  console.log(whichCardClicked);
+
   return (
     <header className="container">
-      <div className={style.header_inner}>
+      <div className={`${style.header_inner} container_inner`}>
         <div className={style.logo}>
           <svg
             width="40"

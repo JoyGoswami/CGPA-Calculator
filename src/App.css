@@ -17,6 +17,9 @@ body {
 .container {
   width: 360px;
   margin: 0 auto;
+  /* padding-inline: 20px; */
+}
+.container_inner {
   padding-inline: 20px;
 }
 .section {
