@@ -1,0 +1,44 @@
+.btn_contaier {
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  position: relative;
+}
+
+.btn {
+  position: relative;
+}
+.btn {
+  position: relative;
+}
+.dash {
+  position: absolute;
+
+  height: 15px;
+  width: 10px;
+  transform: translate(0%, -50%);
+}
+.left_dash {
+  border-right: 1px solid black;
+  left: 0;
+  top: 50%;
+
+  transition: all 0.2s ease;
+}
+.right_dash {
+  border-left: 1px solid black;
+  right: 0;
+  top: 50%;
+  transition: all 0.2s ease;
+}
+
+.btn:hover .left_dash {
+  top: -25%;
+  left: 50%;
+  transform: translate(-50%) rotate(90deg);
+}
+.btn:hover .right_dash {
+  top: 75%;
+  right: 50%;
+  transform: translate(50%) rotate(90deg);
+}
