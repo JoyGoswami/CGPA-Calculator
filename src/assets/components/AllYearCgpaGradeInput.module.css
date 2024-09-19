@@ -1,0 +1,32 @@
+.result_input {
+  background-color: #ffe1ab;
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.input_field_container {
+  justify-content: space-between;
+  padding: 8px;
+}
+.input_field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 8px;
+  width: 100%;
+  height: 24px;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.credit {
+  width: 50%;
+  max-width: 50%;
+}
+.grade_select {
+  background-color: #ffe1ab;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  padding-inline: 8px;
+  outline: none;
+  cursor: pointer;
+}

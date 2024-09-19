@@ -1,0 +1,22 @@
+.result {
+  background-color: var(--primary-color);
+  margin-top: 16px;
+}
+.result_inner {
+  color: white;
+  padding-top: 4px;
+}
+.exam_year_name {
+  text-align: center;
+  padding-top: 8px;
+}
+.result_box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  text-align: center;
+  height: 56px;
+}
+.label {
+  margin-bottom: 4px;
+}

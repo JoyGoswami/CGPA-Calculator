@@ -264,7 +264,6 @@ const AppStorageContextProvider = ({ children }) => {
   };
 
   const grades = [
-    "Select",
     "A+ 4.00",
     "A 3.75",
     "A- 3.50",
@@ -283,6 +282,9 @@ const AppStorageContextProvider = ({ children }) => {
   const [subjectNameOnSelectChange, setSubjectNameOnSelectChange] = useState();
   const [sgpaValue, setSgpaValue] = useState({});
   const [gradeInputArr, setGradeInputArr] = useState([]);
+  const [yearCgpa, setYear] = useState([]);
+  const [btnAllYearClick, setBtnAllYearClick] = useState(false);
+  const [allYearCgpaArr, setAllYearCgpaArr] = useState([]);
 
   let coursesFilteredYear;
   let creditArr = [];
@@ -346,18 +348,75 @@ const AppStorageContextProvider = ({ children }) => {
         setSubjectNameOnSelectChange(courseName);
       });
     }
-    // setGradeInputArr((prev) => [...prev, sgpa]);
+  }
 
-    // let gradeInputObj = { [`${courseName}`]: grade, id: courseName };
-    // if (gradeInputArr.length !== 0) {
-    //   gradeInputArr.map((value) => {
-    //     if (value.id === courseName) {
-    //       let updatedValue = { ...value, [`${courseName}`]: grade };
-    //       setGradeInputArr((prev) => [...prev, updatedValue]);
-    //     }
-    //   });
-    // }
-    // setGradeInputArr((prev) => [...prev, gradeInputObj]);
+  // if makes two object(sgpaObj, creditValue) from values from AppStorage
+  let creditValue = {};
+  let sgpaObj = {};
+  let addSgpaValue = 0;
+  let addCreditValue = 0;
+  if (sgpa.length !== 0) {
+    sgpa.map((value) => {
+      creditValue[`${Object.keys(value)[1]}`] = value[Object.keys(value)[1]];
+      sgpaObj[`${Object.keys(value)[0]}`] = value[Object.keys(value)[0]];
+    });
+  }
+
+  // it makes a value arrey
+  let sgpaValueArr = Object.values(sgpaObj);
+
+  // add the value array and stores it into addSgpaValue
+  if (sgpaValueArr.length !== 0) {
+    addSgpaValue = sgpaValueArr.reduce((accumulator, current) => {
+      return accumulator + current;
+    });
+  }
+  // it makes a value arrey
+  let creditValueArr = Object.values(creditValue);
+  // add the value array and stores it into creditValueArr
+  if (creditValueArr.length !== 0) {
+    addCreditValue = creditValueArr.reduce((accumulator, current) => {
+      return accumulator + current;
+    });
+  }
+
+  //it calculates gpa
+  let gpa = addSgpaValue / addCreditValue;
+
+  // it calculates percentage
+  let percentage = (100 / 4) * gpa;
+
+  function handleYear(year) {
+    setYear((prev) => [...prev, year]);
+  }
+  function handleYear(year) {
+    setYear((prev) => [...prev, year]);
+  }
+  function handleBtnClickAllYear() {
+    if (btnAllYearClick) {
+      setBtnAllYearClick(false);
+    } else {
+      setBtnAllYearClick(true);
+    }
+  }
+  function handleAllYearCgpaInput(year, value) {
+    let allYearCgpaObj = { [`${year}`]: parseFloat(value.split(" ").pop()) };
+    setAllYearCgpaArr((prev) => [...prev, allYearCgpaObj]);
+  }
+
+  let allYearCgpaObjValue = {};
+  let addallYearCgpa;
+  if (allYearCgpaArr.length !== 0) {
+    allYearCgpaArr.map((value) => {
+      allYearCgpaObjValue[`${Object.keys(value)[0]}`] =
+        value[`${Object.keys(value)[0]}`];
+    });
+  }
+  const allYearCgpaValuesArr = Object.values(allYearCgpaObjValue);
+  if (allYearCgpaValuesArr.length !== 0) {
+    addallYearCgpa = allYearCgpaValuesArr.reduce((accumulator, current) => {
+      return accumulator + current;
+    });
   }
 
   return (
@@ -374,10 +433,19 @@ const AppStorageContextProvider = ({ children }) => {
         subjectNameOnSelectChange: subjectNameOnSelectChange,
         sgpaValue: sgpaValue,
         gradeInputArr: gradeInputArr,
+        yearCgpa: yearCgpa,
+        gpa: gpa,
+        percentage: percentage,
+        btnAllYearClick: btnAllYearClick,
+        addallYearCgpa: addallYearCgpa,
+        allYearCgpaArr: allYearCgpaArr,
         handleHamClick: handleHamClick,
         handleCardClick: handleCardClick,
         handleSubYearSubmit: handleSubYearSubmit,
         handleGradeInput: handleGradeInput,
+        handleYear: handleYear,
+        handleBtnClickAllYear: handleBtnClickAllYear,
+        handleAllYearCgpaInput: handleAllYearCgpaInput,
       }}
     >
       {children}

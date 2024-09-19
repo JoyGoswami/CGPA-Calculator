@@ -47,16 +47,6 @@ function InputSubYear() {
               </option>
             );
           })}
-          {/* {nationalUniversity.map((subjectName) => {
-            return (
-              <option
-                key={subjectName[0].subjectName}
-                value={subjectName[0].subjectName}
-              >
-                {subjectName[0].subjectName}
-              </option>
-            );
-          })} */}
         </select>
       </div>
       <div className={style.input_field}>
