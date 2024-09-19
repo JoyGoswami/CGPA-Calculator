@@ -5,15 +5,16 @@ import NuIcon from "../icons/nu_logo.png";
 import OtherUniIcon from "../icons/others_uni_logo.svg";
 import HomeIcon from "../icons/home.svg";
 import { AppStorageContext } from "./Storage/AppStorage";
-import ResultContainer from "./ResultContainer.jsx";
-import SubYear from "./SubYear.jsx";
+
+import InputSubYear from "./InputSubYear.jsx";
+import CourseYearContainer from "./CourseYearContainer.jsx";
 
 function Main() {
   const { isHamClicked, whichCardClicked } = useContext(AppStorageContext);
-  console.log(whichCardClicked);
+
   return (
     <main className="container">
-      {/* {whichCardClicked === "" ? (
+      {whichCardClicked === "" ? (
         <div className={`${style.main_inner} container_inner`}>
           <Card img={NuIcon} text="National University" paddingValue="0" />
           <Card
@@ -23,14 +24,14 @@ function Main() {
           />
         </div>
       ) : whichCardClicked === "National University" ? (
-        <SubYear text="National University" />
+        <CourseYearContainer />
       ) : (
-        <SubYear text="Other Universities" />
-      )} */}
-      <div className={`${style.main_inner} container_inner`}>
+        <CourseYearContainer />
+      )}
+      {/* <div className={`${style.main_inner} container_inner`}>
         <Card img={NuIcon} text="National University" paddingValue="0" />
         <Card img={OtherUniIcon} text="Others Universities" paddingValue="0" />
-      </div>
+      </div> */}
 
       <div className={`${style.overlay} ${isHamClicked ? style.active : ""}`}>
         <h2 className={style.overlay_text}>Calculate Your CGPA</h2>

@@ -7,10 +7,9 @@
 
 .btn {
   position: relative;
+  cursor: pointer;
 }
-.btn {
-  position: relative;
-}
+
 .dash {
   position: absolute;
 
