@@ -5,6 +5,8 @@
 .result_inner {
   color: white;
   padding-top: 4px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .exam_year_name {
   text-align: center;

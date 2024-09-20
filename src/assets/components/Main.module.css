@@ -5,6 +5,7 @@ main {
 .main_inner {
   margin-top: 128px;
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
 .overlay {

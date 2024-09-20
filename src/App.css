@@ -31,3 +31,14 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 64px 1fr 64px;
 }
+
+@media (min-width: 361px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) {
+  .container {
+    width: 700px;
+  }
+}

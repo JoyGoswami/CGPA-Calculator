@@ -4,6 +4,8 @@
 }
 .result_inner {
   color: white;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .exam_year_name {
   text-align: center;

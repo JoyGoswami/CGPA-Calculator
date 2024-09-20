@@ -31,9 +31,7 @@ function ResultInput({ courseName, courseCode, credit, serialNum }) {
             name="grade"
             id="grade"
           >
-            <option value="Select" defaultValue="Select" disabled>
-              Select
-            </option>
+            <option defaultValue>Select</option>
             {grades.map((grade) => {
               return (
                 <option key={grade} value={grade}>

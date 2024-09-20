@@ -9,6 +9,8 @@
   /* justify-content: space-between; */
   grid-template-columns: 20px 1fr;
   grid-template-rows: 1fr 1fr;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .course_number {
   justify-self: center;
@@ -25,6 +27,8 @@
   display: flex;
   justify-content: space-between;
   padding: 8px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .input_field {
   display: flex;

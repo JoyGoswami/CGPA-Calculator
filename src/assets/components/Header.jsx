@@ -10,7 +10,7 @@ function Header() {
   return (
     <header className="container">
       <div className={`${style.header_inner} container_inner`}>
-        <div className={style.logo}>
+        <div onClick={() => location.reload()} className={style.logo}>
           <svg
             width="40"
             height="40"
@@ -51,13 +51,16 @@ function Header() {
               fill="#FAA813"
             />
           </svg>
+          <div className={style.app_name}>
+            National University CGPA Calculator
+          </div>
         </div>
-        <div className={style.app_name}>CGPA Calculator</div>
-        {whichCardClicked === "" ? (
+        {/* <div className={style.app_name}>CGPA Calculator</div> */}
+        {/* {whichCardClicked === "" ? (
           <div className={style.placeHolder}></div>
         ) : (
           <Hamburger />
-        )}
+        )} */}
       </div>
     </header>
   );

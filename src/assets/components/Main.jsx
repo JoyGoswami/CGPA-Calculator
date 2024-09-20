@@ -17,6 +17,13 @@ function Main() {
       {whichCardClicked === "" ? (
         <div className={`${style.main_inner} container_inner`}>
           <Card img={NuIcon} text="National University" paddingValue="0" />
+        </div>
+      ) : (
+        <CourseYearContainer />
+      )}
+      {/* {whichCardClicked === "" ? (
+        <div className={`${style.main_inner} container_inner`}>
+          <Card img={NuIcon} text="National University" paddingValue="0" />
           <Card
             img={OtherUniIcon}
             text="Others Universities"
@@ -27,31 +34,7 @@ function Main() {
         <CourseYearContainer />
       ) : (
         <CourseYearContainer />
-      )}
-      {/* <div className={`${style.main_inner} container_inner`}>
-        <Card img={NuIcon} text="National University" paddingValue="0" />
-        <Card img={OtherUniIcon} text="Others Universities" paddingValue="0" />
-      </div> */}
-
-      <div className={`${style.overlay} ${isHamClicked ? style.active : ""}`}>
-        <h2 className={style.overlay_text}>Calculate Your CGPA</h2>
-        {whichCardClicked === "National University" ? (
-          <div className={style.overlay_inner}>
-            <Card img={HomeIcon} text="Home" paddingValue="20" />
-
-            <Card
-              img={OtherUniIcon}
-              text="Others Universities"
-              paddingValue="0"
-            />
-          </div>
-        ) : (
-          <div className={style.overlay_inner}>
-            <Card img={HomeIcon} text="Home" paddingValue="20" />
-            <Card img={NuIcon} text="National University" paddingValue="0" />
-          </div>
-        )}
-      </div>
+      )} */}
     </main>
   );
 }

@@ -51,14 +51,18 @@ header {
 /*                 */
 
 .header_inner {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 
   height: 100%;
 }
 .logo {
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .app_name {
   font-weight: 800;
