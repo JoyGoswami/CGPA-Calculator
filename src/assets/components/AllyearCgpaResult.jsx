@@ -3,8 +3,10 @@ import style from "./AllyearCgpaResult.module.css";
 import { AppStorageContext } from "./Storage/AppStorage";
 
 function AllyearCgpaResult() {
-  const { addallYearCgpa, allYearCgpaArr } = useContext(AppStorageContext);
-  let cgpa = addallYearCgpa / allYearCgpaArr.length;
+  const { addallYearCgpa, allYearCgpaArr, allYearCgpaObjValue } =
+    useContext(AppStorageContext);
+
+  let cgpa = addallYearCgpa / Object.keys(allYearCgpaObjValue).length;
   return (
     <div className={`${style.result} container`}>
       <div className={`${style.result_inner} container_inner`}>

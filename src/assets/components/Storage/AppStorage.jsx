@@ -439,6 +439,7 @@ const AppStorageContextProvider = ({ children }) => {
         btnAllYearClick: btnAllYearClick,
         addallYearCgpa: addallYearCgpa,
         allYearCgpaArr: allYearCgpaArr,
+        allYearCgpaObjValue: allYearCgpaObjValue,
         handleHamClick: handleHamClick,
         handleCardClick: handleCardClick,
         handleSubYearSubmit: handleSubYearSubmit,
